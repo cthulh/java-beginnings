@@ -13,5 +13,21 @@ public class Main {
         System.out.println("myIntVal = " + myIntVal);
         System.out.println("myFloatVal = " + myFloatVal);
         System.out.println("myDoubleVal = " + myDoubleVal);
+
+        System.out.println("----");
+
+        // Challenge:
+
+        // 1. Create a var to store the number of pounds
+        double weightInPounds = 16d;
+        System.out.println("Weight in pounds = " + weightInPounds);
+        // 2. Calculate the number of kgs for the number above and store in a variable
+        double weightInKgs = weightInPounds * 0.45359237d;
+        // 3. Print it out
+        System.out.println("Weight in kgs = " + weightInKgs);
+        //
+        // Notes: 1 pound is equal to 0.45359237 kgs
+
+
     }
 }

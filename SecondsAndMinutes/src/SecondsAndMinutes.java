@@ -1,12 +1,13 @@
 public class SecondsAndMinutes {
 
+    private static final String INVALID_VALUE_MESSAGE = "Invalid value";
+
     public static void main(String[] args) {
         System.out.println(getDurationString(61,1));
         System.out.println(getDurationString(3661));
     }
 
     public static String getDurationString(int minutes, int seconds){
-        String errorMessage = "Invalid value";
         if (minutes >= 0 && seconds >= 0 && seconds <= 59) {
             String durationMessage = "";
             int hours = minutes/60;
@@ -19,18 +20,17 @@ public class SecondsAndMinutes {
                             + showSeconds + "s";
             return durationMessage;
         } else {
-            return errorMessage;
+            return INVALID_VALUE_MESSAGE;
         }
     }
 
     public static String getDurationString(int seconds) {
-        String errorMessage = "Invalid value";
         if (seconds >= 0) {
             int minutes = seconds / 60;
             int reminderSeconds = seconds % 60;
             return getDurationString(minutes,reminderSeconds);
         } else {
-            return errorMessage;
+            return INVALID_VALUE_MESSAGE;
         }
     }
 

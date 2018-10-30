@@ -2,6 +2,7 @@ public class SecondsAndMinutes {
 
     public static void main(String[] args) {
         System.out.println(getDurationString(61,1));
+        System.out.println(getDurationString(3661));
     }
 
     public static String getDurationString(int minutes, int seconds){
@@ -17,6 +18,17 @@ public class SecondsAndMinutes {
                             + showMinutes + "m "
                             + showSeconds + "s";
             return durationMessage;
+        } else {
+            return errorMessage;
+        }
+    }
+
+    public static String getDurationString(int seconds) {
+        String errorMessage = "Invalid value";
+        if (seconds >= 0) {
+            int minutes = seconds / 60;
+            int reminderSeconds = seconds % 60;
+            return getDurationString(minutes,reminderSeconds);
         } else {
             return errorMessage;
         }
